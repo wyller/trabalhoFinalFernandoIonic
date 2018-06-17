@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { Platform, Nav } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+import { FirebasePage } from '../pages/Firebase/firebase';
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = FirebasePage;
+
+  pages: any
+
+  @ViewChild(Nav) nav: Nav;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
@@ -17,6 +21,16 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
     });
+    this.pages = [
+      {title: 'Banco', component: FirebasePage},
+      {title: 'Foto', component: 'FotoPage'},
+      {title: 'Codigo de Barra', component: 'CodbarraPage'},
+      {title: 'E-mail', component: 'EmailPage'},
+      {title: 'Pipe', component: 'PipePage'},
+      {title: 'ArquivoTexto', component: 'ArquivoTextPage'}
+    ]
+  }
+  openPage(page) {
+    this.nav.setRoot(page.component);
   }
 }
-
