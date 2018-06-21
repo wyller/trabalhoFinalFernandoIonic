@@ -27,7 +27,9 @@ export class MyApp {
       {title: 'Codigo de Barra', component: 'CodbarraPage'},
       {title: 'E-mail', component: 'EmailPage'},
       {title: 'Pipe', component: 'PipePage'},
-      {title: 'ArquivoTexto', component: 'ArquivoTextPage'}
+      {title: 'ArquivoTexto', component: 'ArquivoTextPage'},
+      {title: 'Mapa', component: 'MapPage'}
+
     ]
   }
   openPage(page) {

@@ -9,6 +9,7 @@ import { Camera } from '@ionic-native/camera';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { EmailComposer } from '@ionic-native/email-composer';
 
+import { Geolocation } from '@ionic-native/geolocation';
 import { MyApp } from './app.component';
 import { FirebasePage } from '../pages/Firebase/firebase';
 import { File } from '@ionic-native/file';
@@ -40,6 +41,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     File,
     Camera,
+    Geolocation,
     BarcodeScanner,
     EmailComposer
   ]
