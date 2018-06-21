@@ -11,6 +11,7 @@ export class FirebasePage {
 
   private itemsCollection: AngularFirestoreCollection<any>;
   public items: Observable<any[]>;
+  public putas: any = []
   constructor(
     public db: AngularFirestore,
     public navCtrl: NavController,
@@ -19,6 +20,10 @@ export class FirebasePage {
     this.itemsCollection = db.collection<any>('xerto');
     this.items = this.itemsCollection.valueChanges();
     this.items.subscribe(item => {
+      item.forEach(element => {
+        this.putas = this.putas.concat(element)
+      })
+      console.log('teste', this.putas)
       this.mostraMenssagem('Busca realizada com sucesso!', 1000)
     })
   }

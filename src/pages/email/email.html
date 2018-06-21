@@ -18,11 +18,11 @@
 
   <ion-content padding>
     <ion-list>
-      <ion-item>
+      <ion-item class="no-background-container">
         <ion-label floating>Email</ion-label>
         <ion-input [(ngModel)]="email"></ion-input>
       </ion-item>
 
-      <button ion-button large block (click)="enviarEmailDinamico()">Enviar</button>
+      <button ion-button large block color="dark" (click)="enviarEmailDinamico()">Enviar</button>
     </ion-list>
   </ion-content>

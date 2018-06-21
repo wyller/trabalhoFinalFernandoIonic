@@ -14,12 +14,12 @@
 
   <ion-content padding>
     <ion-list>
-      <ion-item>
+      <ion-item class="no-background-container">
         <ion-label floating>Texto salvo em Arquivo Texto</ion-label>
 
         <ion-input type="text" spellcheck="false" autocapitalize="off" [(ngModel)]="texto"></ion-input>
       </ion-item>
 
-      <button ion-button full (click)="submit()">Finalizar</button>
+      <button ion-button full (click)="submit()" color="dark" >Finalizar</button>
     </ion-list>
   </ion-content>

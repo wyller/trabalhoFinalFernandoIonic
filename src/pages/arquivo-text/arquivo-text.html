@@ -17,15 +17,15 @@
 
 
   <ion-content padding>
-    <ion-card *ngIf="texto !== null">
+    <ion-card *ngIf="texto !== null" class="card-puta">
       <ion-card-content>
         <p>{{texto}}</p>
       </ion-card-content>
       <ion-grid>
         <ion-row justify-content-center justify-content-around>
           <ion-col col-12>
-            <button ion-button color="danger" clear icon-only (click)="deletar()">
-              <ion-icon ios='md-trash' name='md-trash'></ion-icon>
+            <button ion-button block color="danger" (click)="deletar()">
+                <p>Deletar</p>
             </button>
           </ion-col>
         </ion-row>
